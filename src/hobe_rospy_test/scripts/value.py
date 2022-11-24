@@ -64,13 +64,8 @@ class ServiceType(Enum):
     Move = 1
     GuideMove = 2
     PreciseMove = 3
-    StraightBackMove = 4
-    # bae
-    MoveArmToInitPose = 5
-    MoveArmToAttach = 6
-    OpenGripper = 7
-    MoveArmToDetach = 8
-    CloseGripper = 9
+    FlatPreciseMove = 4
+    StraightBackMove = 5
 
 
 

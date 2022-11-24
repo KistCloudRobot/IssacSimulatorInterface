@@ -43,6 +43,8 @@ class MessageFactory:
             byteBuffer = MessageFactory.newAckGuideMoveMessage(service, byteBuffer)
         elif isinstance(service, PreciseMoveService):
             byteBuffer = MessageFactory.newAckPreciseMoveMessage(service, byteBuffer)
+        elif isinstance(service, FlatPreciseMoveService):
+            byteBuffer = MessageFactory.newAckFlatPreciseMoveMessage(service, byteBuffer)
         elif isinstance(service, StraightBackMoveService):
             byteBuffer = MessageFactory.newAckStraightBackMoveMessage(service, byteBuffer)
         elif isinstance(service, LoadService):
@@ -71,6 +73,8 @@ class MessageFactory:
             byteBuffer = MessageFactory.newAckEndGuideMoveMessage(service, byteBuffer)
         elif isinstance(service, PreciseMoveService):
             byteBuffer = MessageFactory.newAckEndPreciseMoveMessage(service, byteBuffer)
+        elif isinstance(service, FlatPreciseMoveService):
+            byteBuffer = MessageFactory.newAckEndFlatPreciseMoveMessage(service, byteBuffer)
         elif isinstance(service, StraightBackMoveService):
             byteBuffer = MessageFactory.newAckEndStraightBackMoveMessage(service, byteBuffer)
         elif isinstance(service, LoadService):
@@ -142,6 +146,21 @@ class MessageFactory:
     @staticmethod
     def newAckEndPreciseMoveMessage(service, byteBuffer):
         byteBuffer.appendInt(MessageType.AckEndPreciseMove.value, signed=False)
+        byteBuffer.appendInt(20)
+        byteBuffer.appendInt(service.robotName.value)
+        byteBuffer.appendInt(service.result.value)
+        return byteBuffer
+
+    @staticmethod
+    def newAckFlatPreciseMoveMessage(service, byteBuffer):
+        byteBuffer.appendInt(MessageType.AckFlatPreciseMove.value, signed=False)
+        byteBuffer.appendInt(16)
+        byteBuffer.appendInt(service.robotName.value)
+        return byteBuffer
+
+    @staticmethod
+    def newAckEndFlatPreciseMoveMessage(service, byteBuffer):
+        byteBuffer.appendInt(MessageType.AckEndFlatPreciseMove.value, signed=False)
         byteBuffer.appendInt(20)
         byteBuffer.appendInt(service.robotName.value)
         byteBuffer.appendInt(service.result.value)

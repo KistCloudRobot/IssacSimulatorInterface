@@ -47,6 +47,12 @@ class PreciseMoveService(RobotService):
         self.node = node
 
 
+class FlatPreciseMoveService(RobotService):
+    def __init__(self, robotName, node):
+        super().__init__(robotName)
+        self.node = node
+
+
 class StraightBackMoveService(RobotService):
     def __init__(self, robotName, node):
         super().__init__(robotName)

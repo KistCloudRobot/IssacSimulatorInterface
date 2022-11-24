@@ -22,6 +22,8 @@ class ServiceFactory:
             return ServiceFactory.newGuideMoveService(byteBuffer)
         elif messageType == MessageType.ReqPreciseMove:
             return ServiceFactory.newPreciseMoveService(byteBuffer)
+        elif messageType == MessageType.ReqFlatPreciseMove:
+            return ServiceFactory.newFlatPreciseMoveService(byteBuffer)
         elif messageType == MessageType.ReqStraightBackMove:
             return ServiceFactory.newStraightBackMoveService(byteBuffer)
         elif messageType == MessageType.ReqLoad:
@@ -74,6 +76,14 @@ class ServiceFactory:
         node = byteBuffer.getInt()
 
         return PreciseMoveService(robotName, node)
+
+    @staticmethod
+    def newFlatPreciseMoveService(byteBuffer):
+
+        robotName = RobotID(byteBuffer.getInt())
+        node = byteBuffer.getInt()
+
+        return FlatPreciseMoveService(robotName, node)
 
     @staticmethod
     def newStraightBackMoveService(byteBuffer):

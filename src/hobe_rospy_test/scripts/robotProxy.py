@@ -43,6 +43,9 @@ class RobotProxy:
                 elif isinstance(service, PreciseMoveService):
                     self.status = RobotStatus.PreciseMove
                     print("[" + str(self.name.name) + "] " + str(self.status.name) + " " + str(self.service.node))
+                elif isinstance(service, FlatPreciseMoveService):
+                    self.status = RobotStatus.FlatPreciseMove
+                    print("[" + str(self.name.name) + "] " + str(self.status.name) + " " + str(self.service.node))
                 elif isinstance(service, StraightBackMoveService):
                     self.status = RobotStatus.StraightBackMove
                     print("[" + str(self.name.name) + "] " + str(self.status.name) + " " + str(self.service.node))
@@ -69,6 +72,8 @@ class RobotProxy:
                 self.handleMoveGuideService()
             elif isinstance(self.service, PreciseMoveService):
                 self.handlePreciseMoveService()
+            elif isinstance(self.service, FlatPreciseMoveService):
+                self.handleFlatPreciseMoveService()
             elif isinstance(self.service, StraightBackMoveService):
                 self.handleStraightBackMoveService()
             elif isinstance(self.service, LoadService):
@@ -105,6 +110,13 @@ class RobotProxy:
             self.service.result = ServiceResult.Success
 
     def handlePreciseMoveService(self):
+        self.goal = MapManager.instance().vertexToPos(self.service.node)
+        moveFinished = moveToNode(self)
+
+        if moveFinished:
+            self.service.result = ServiceResult.Success
+
+    def handleFlatPreciseMoveService(self):
         self.goal = MapManager.instance().vertexToPos(self.service.node)
         moveFinished = moveToNode(self)
 
