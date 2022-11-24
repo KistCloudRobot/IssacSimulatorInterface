@@ -1,0 +1,8 @@
+prefix=/home/ailab/BAE_WS/Python/catkin_ws/install
+
+Name: hobe_rospy_test
+Description: Description of hobe_rospy_test
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lhobe_rospy_test
+Requires: geometry_msgs rospy sensor_msgs std_msgs tf2_msgs nav_msgs message_runtime

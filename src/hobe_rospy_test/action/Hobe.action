@@ -1,0 +1,11 @@
+#goal
+string robotName
+int32[] nodePath
+string order
+---
+#result
+bool success
+float64 planningTime
+---
+#feedback
+string state

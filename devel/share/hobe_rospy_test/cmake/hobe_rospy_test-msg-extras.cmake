@@ -1,0 +1,2 @@
+set(hobe_rospy_test_MESSAGE_FILES "/home/ailab/BAE_WS/Python/catkin_ws/src/hobe_rospy_test/msg/ServiceResult.msg;/home/ailab/BAE_WS/Python/catkin_ws/src/hobe_rospy_test/msg/PalletizerPackingFinish.msg")
+set(hobe_rospy_test_SERVICE_FILES "/home/ailab/BAE_WS/Python/catkin_ws/src/hobe_rospy_test/srv/LiftService.srv;/home/ailab/BAE_WS/Python/catkin_ws/src/hobe_rospy_test/srv/MoveBackService.srv;/home/ailab/BAE_WS/Python/catkin_ws/src/hobe_rospy_test/srv/MoveToNodeService.srv;/home/ailab/BAE_WS/Python/catkin_ws/src/hobe_rospy_test/srv/PalletService.srv")

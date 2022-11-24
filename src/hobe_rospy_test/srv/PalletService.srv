@@ -1,0 +1,6 @@
+string action
+string palletizer
+string robot
+string node
+---
+bool result

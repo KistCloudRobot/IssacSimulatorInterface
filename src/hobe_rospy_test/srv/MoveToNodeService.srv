@@ -1,0 +1,7 @@
+string robotName
+int32 node
+string action
+float64 velocity
+---
+bool success
+string status

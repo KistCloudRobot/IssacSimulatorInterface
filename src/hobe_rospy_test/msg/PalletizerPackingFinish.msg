@@ -1,0 +1,2 @@
+string palletizer
+string node

@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="hobe_rospy_test" type="RobotController_Client.py" name="move_client"/>
+	<node pkg="hobe_rospy_test" type="RobotController_Server.py" name="move_server"/>
+</launch>

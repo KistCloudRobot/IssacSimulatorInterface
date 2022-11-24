@@ -1,0 +1,2 @@
+hobe_rospy_test
+-DCATKIN_DEVEL_PREFIX=/home/ailab/BAE_WS/Python/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ailab/BAE_WS/Python/catkin_ws/install -G Unix Makefiles
