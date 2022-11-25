@@ -15,4 +15,4 @@ class RobotConfiguration:
 
 
 class FileConfiguration:
-    MAP_FILE_PATH = "/home/ailab/kyonggiDemoCode0729/catkin_ws/utils/map_cloud.txt"
+    MAP_FILE_PATH = "/home/ailab/BAE_WS/Python/catkin_ws/utils/map_cloud.txt"

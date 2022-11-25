@@ -45,13 +45,8 @@ class RobotStatus(Enum):
     EmergencyStop = 11
     GuideMove = 12
     PreciseMove = 13
-    StraightBackMove = 14
-    # bae
-    MoveArmToInitPose = 15
-    MoveArmToAttach = 16
-    OpenGripper = 17
-    MoveArmToDetach = 18
-    CloseGripper = 19
+    FlatPreciseMove = 14
+    StraightBackMove = 15
 
 
 class Direction(Enum):
