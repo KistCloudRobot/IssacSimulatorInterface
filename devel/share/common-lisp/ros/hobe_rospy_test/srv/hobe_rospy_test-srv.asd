@@ -12,6 +12,4 @@
     (:file "_package_MoveToNodeService" :depends-on ("_package"))
     (:file "PalletService" :depends-on ("_package_PalletService"))
     (:file "_package_PalletService" :depends-on ("_package"))
-    (:file "PalletService_old" :depends-on ("_package_PalletService_old"))
-    (:file "_package_PalletService_old" :depends-on ("_package"))
   ))

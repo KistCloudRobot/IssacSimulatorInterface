@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/ailab/BAE_WS/Python/catkin_ws/devel/setup.sh
+    local-name: /home/uosai/catkin_ws/devel/setup.sh

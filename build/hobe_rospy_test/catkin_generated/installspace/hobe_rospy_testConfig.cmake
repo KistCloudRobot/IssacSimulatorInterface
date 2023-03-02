@@ -67,14 +67,14 @@ set(hobe_rospy_test_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(hobe_rospy_test_SOURCE_PREFIX /home/ailab/BAE_WS/Python/catkin_ws/src/hobe_rospy_test)
-  set(hobe_rospy_test_DEVEL_PREFIX /home/ailab/BAE_WS/Python/catkin_ws/devel)
+  set(hobe_rospy_test_SOURCE_PREFIX /home/uosai/catkin_ws/src/hobe_rospy_test)
+  set(hobe_rospy_test_DEVEL_PREFIX /home/uosai/catkin_ws/devel)
   set(hobe_rospy_test_INSTALL_PREFIX "")
   set(hobe_rospy_test_PREFIX ${hobe_rospy_test_DEVEL_PREFIX})
 else()
   set(hobe_rospy_test_SOURCE_PREFIX "")
   set(hobe_rospy_test_DEVEL_PREFIX "")
-  set(hobe_rospy_test_INSTALL_PREFIX /home/ailab/BAE_WS/Python/catkin_ws/install)
+  set(hobe_rospy_test_INSTALL_PREFIX /home/uosai/catkin_ws/install)
   set(hobe_rospy_test_PREFIX ${hobe_rospy_test_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ailab/BAE_WS/Python/catkin_ws/install/lib;/home/ailab/BAE_WS/Python/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/uosai/catkin_ws/install/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

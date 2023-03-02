@@ -1,5 +1,0 @@
-string robotName
-string action
-string parameter
----
-bool result

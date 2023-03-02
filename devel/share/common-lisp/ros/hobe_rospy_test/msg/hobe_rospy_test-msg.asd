@@ -4,8 +4,6 @@
 (defsystem "hobe_rospy_test-msg"
   :depends-on (:roslisp-msg-protocol :roslisp-utils )
   :components ((:file "_package")
-    (:file "AABB" :depends-on ("_package_AABB"))
-    (:file "_package_AABB" :depends-on ("_package"))
     (:file "Gripper" :depends-on ("_package_Gripper"))
     (:file "_package_Gripper" :depends-on ("_package"))
     (:file "MainServiceRequest" :depends-on ("_package_MainServiceRequest"))

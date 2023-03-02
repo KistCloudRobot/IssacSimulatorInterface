@@ -56,6 +56,7 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    ServiceResult.msg
    PalletizerPackingFinish.msg
+   Gripper.msg
  )
 
 ## Generate services in the 'srv' folder

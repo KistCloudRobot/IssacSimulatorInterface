@@ -1,4 +1,4 @@
-prefix=/home/ailab/BAE_WS/Python/catkin_ws/install
+prefix=/home/uosai/catkin_ws/install
 
 Name: hobe_rospy_test
 Description: Description of hobe_rospy_test

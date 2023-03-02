@@ -1,8 +1,6 @@
 (cl:defpackage hobe_rospy_test-msg
   (:use )
   (:export
-   "<AABB>"
-   "AABB"
    "<GRIPPER>"
    "GRIPPER"
    "<MAINSERVICEREQUEST>"

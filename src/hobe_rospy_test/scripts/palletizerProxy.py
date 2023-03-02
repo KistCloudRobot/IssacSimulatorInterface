@@ -13,7 +13,7 @@ class PalletizerProxy:
     def __init__(self, name):
         self.name = name
         self.service = None
-        self.rosService = rospy.ServiceProxy("/control_palletizer", PalletService)
+        self.rosService = rospy.ServiceProxy("/control_ur10_paletting", PalletService)
 
     def setService(self, service):
         

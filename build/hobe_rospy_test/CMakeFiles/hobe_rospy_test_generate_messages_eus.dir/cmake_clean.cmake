@@ -1,11 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/manifest.l"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/msg/PalletizerPackingFinish.l"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/msg/ServiceResult.l"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/srv/LiftService.l"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/srv/MoveBackService.l"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/srv/MoveToNodeService.l"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/srv/PalletService.l"
+  "/home/uosai/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/manifest.l"
+  "/home/uosai/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/msg/Gripper.l"
+  "/home/uosai/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/msg/PalletizerPackingFinish.l"
+  "/home/uosai/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/msg/ServiceResult.l"
+  "/home/uosai/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/srv/LiftService.l"
+  "/home/uosai/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/srv/MoveBackService.l"
+  "/home/uosai/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/srv/MoveToNodeService.l"
+  "/home/uosai/catkin_ws/devel/share/roseus/ros/hobe_rospy_test/srv/PalletService.l"
   "CMakeFiles/hobe_rospy_test_generate_messages_eus"
 )
 

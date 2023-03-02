@@ -8,11 +8,11 @@ class Communication:
 
 
 class RobotConfiguration:
-    DIST_THRESHOLD = 0.25
+    DIST_THRESHOLD = 0.15
     ANGLE_THRESHOLD = math.pi / 360.0
     LIFT_VALUE = 0.004
     TWIST_MAX_COUNT = 5
 
 
 class FileConfiguration:
-    MAP_FILE_PATH = "/home/ailab/BAE_WS/Python/catkin_ws/utils/map_cloud.txt"
+    MAP_FILE_PATH = "/home/uosai/catkin_ws/utils/map_cloud.txt"

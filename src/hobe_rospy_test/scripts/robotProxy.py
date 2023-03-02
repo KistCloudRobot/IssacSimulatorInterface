@@ -36,7 +36,7 @@ class RobotProxy:
                     self.status = RobotStatus.Move
                     print("[" + str(self.name.name) + "] " + str(self.status.name) + " " + str(self.service.path))
                     self.service.path = MapManager.instance().optimizePath(service.path)
-                    print("[" + str(self.name.name) + "] optimized path : " + str(self.service.path))
+                    # print("[" + str(self.name.name) + "] optimized path : " + str(self.service.path))
                 elif isinstance(service, GuideMoveService):
                     self.status = RobotStatus.GuideMove
                     print("[" + str(self.name.name) + "] " + str(self.status.name) + " " + str(self.service.node))

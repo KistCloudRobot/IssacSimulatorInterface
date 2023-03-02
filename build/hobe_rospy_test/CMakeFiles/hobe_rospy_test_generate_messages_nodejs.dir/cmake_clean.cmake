@@ -1,10 +1,11 @@
 file(REMOVE_RECURSE
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/msg/PalletizerPackingFinish.js"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/msg/ServiceResult.js"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/srv/LiftService.js"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/srv/MoveBackService.js"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/srv/MoveToNodeService.js"
-  "/home/ailab/BAE_WS/Python/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/srv/PalletService.js"
+  "/home/uosai/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/msg/Gripper.js"
+  "/home/uosai/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/msg/PalletizerPackingFinish.js"
+  "/home/uosai/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/msg/ServiceResult.js"
+  "/home/uosai/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/srv/LiftService.js"
+  "/home/uosai/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/srv/MoveBackService.js"
+  "/home/uosai/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/srv/MoveToNodeService.js"
+  "/home/uosai/catkin_ws/devel/share/gennodejs/ros/hobe_rospy_test/srv/PalletService.js"
   "CMakeFiles/hobe_rospy_test_generate_messages_nodejs"
 )
 

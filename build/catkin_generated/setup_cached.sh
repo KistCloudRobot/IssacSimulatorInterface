@@ -7,7 +7,11 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu:/usr/lib/nvidia:/home/ailab/.mujoco/mujoco210/bin:/usr/lib/swi-prolog/bin/x86_64-linux/:/usr/lib/swi-prolog/lib/x86_64-linux/'
-export PKG_CONFIG_PATH='/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig'
-export PWD='/home/ailab/BAE_WS/Python/catkin_ws/build'
-export PYTHONPATH='/opt/ros/noetic/lib/python3/dist-packages'
+export CMAKE_PREFIX_PATH="/home/uosai/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/uosai/catkin_ws/devel/lib:$LD_LIBRARY_PATH"
+export PATH='/opt/ros/noetic/bin:/home/uosai/anaconda3/bin:/home/uosai/anaconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda-11.3/bin'
+export PKG_CONFIG_PATH="/home/uosai/catkin_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PWD='/home/uosai/catkin_ws/build'
+export PYTHONPATH="/home/uosai/catkin_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES='/home/uosai/catkin_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/uosai/catkin_ws/src:$ROS_PACKAGE_PATH"
