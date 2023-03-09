@@ -25,6 +25,7 @@ class RobotService(Service):
         super().__init__()
         self.robotName = robotName
 
+
 class MoveService(RobotService):
     def __init__(self, robotName):
         super().__init__(robotName)
@@ -32,6 +33,12 @@ class MoveService(RobotService):
 
     def appendPath(self, node: int):
         self.path.append(node)
+
+
+class CancelMoveService(RobotService):
+    def __init__(self, robotName):
+        super().__init__(robotName)
+        self.path = list()
 
 
 class GuideMoveService(RobotService):

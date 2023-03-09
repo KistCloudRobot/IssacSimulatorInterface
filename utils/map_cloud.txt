@@ -52,7 +52,7 @@ Vertex
 Vertex
 	name 101
 	type 0
-	pos 16.075 0.0 10.188
+	pos 17.575 0.0 10.188
 	edge 100
 	edge 142
 	edge 102
@@ -353,7 +353,7 @@ Vertex
 Vertex
 	name 151
 	type 0
-	pos 13.401 0.0 3.166
+	pos 13.543 0.0 3.166
 	edge 141
 	edge 152
 Vertex
@@ -585,24 +585,24 @@ Vertex
 Vertex
 	name 157
 	type 0
-	pos 45.9 0.0 8.5
+	pos 46.7 0.0 8.5
 	edge 500
 	edge 120
 Vertex
 	name 158
 	type 0
-	pos 45.9 0.0 7.1
+	pos 46.7 0.0 7.1
 	edge 501
 	edge 121
 Vertex
 	name 501
 	type 2
-	pos 46.4 0.0 7.1
+	pos 47.4 0.0 7.1
 	edge 158
 Vertex
 	name 500
 	type 2
-	pos 46.4 0.0 8.5
+	pos 47.4 0.0 8.5
 	edge 157
 Vertex
 	name 1

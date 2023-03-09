@@ -18,6 +18,8 @@ class ServiceFactory:
             return ServiceFactory.newLoginService(byteBuffer)
         elif messageType == MessageType.ReqMove:
             return ServiceFactory.newMoveService(byteBuffer)
+        elif messageType == MessageType.ReqCancelMove:
+            return ServiceFactory.newCancelMoveService(byteBuffer)
         elif messageType == MessageType.ReqGuideMove:
             return ServiceFactory.newGuideMoveService(byteBuffer)
         elif messageType == MessageType.ReqPreciseMove:
@@ -57,6 +59,14 @@ class ServiceFactory:
         for _ in range(pathSize):
             node = byteBuffer.getInt()
             service.path.append(node)
+
+        return service
+
+    @staticmethod
+    def newCancelMoveService(byteBuffer):
+
+        robotName = RobotID(byteBuffer.getInt())
+        service = CancelMoveService(robotName)
 
         return service
 

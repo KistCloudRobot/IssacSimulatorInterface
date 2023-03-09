@@ -127,6 +127,13 @@ def moveBackToNode(robot):
     return isFinished
 
 
+def stopMove(robot):
+    robot.speed.linear.x = 0.0
+    robot.speed.angular.z = 0.0
+    robot.forward = False
+    robot.speedPublisher.publish(robot.speed)
+
+
 def handleLoad(robot):
     robot.joint.name = ['lift_joint']
     jointValue = robot.joint.position[0]

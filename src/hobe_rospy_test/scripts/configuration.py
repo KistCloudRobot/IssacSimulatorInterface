@@ -2,7 +2,8 @@ import math
 
 
 class Communication:
-    HOST = "127.0.0.1"
+    # HOST = "127.0.0.1"
+    HOST = "172.16.165.160"
     # HOST ='192.168.0.152'
     PORT = 30001
 

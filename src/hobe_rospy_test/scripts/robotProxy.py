@@ -37,6 +37,8 @@ class RobotProxy:
                     print("[" + str(self.name.name) + "] " + str(self.status.name) + " " + str(self.service.path))
                     self.service.path = MapManager.instance().optimizePath(service.path)
                     # print("[" + str(self.name.name) + "] optimized path : " + str(self.service.path))
+                elif isinstance(service, CancelMoveService):
+                    print("[" + str(self.name.name) + "] " + str(self.status.name))
                 elif isinstance(service, GuideMoveService):
                     self.status = RobotStatus.GuideMove
                     print("[" + str(self.name.name) + "] " + str(self.status.name) + " " + str(self.service.node))
@@ -60,6 +62,8 @@ class RobotProxy:
                 self.service = service
                 self.status = RobotStatus.Ready
                 print("[" + str(self.name.name) + "] " + str(self.status.name))
+            elif isinstance(service, CancelMoveService) and isinstance(self.service, MoveService):
+                self.service = service
             else:
                 service.result = ServiceResult.CannotAssignNewService
 
@@ -68,6 +72,8 @@ class RobotProxy:
         if self.service is not None:
             if isinstance(self.service, MoveService):
                 self.handleMoveService()
+            elif isinstance(self.service, CancelMoveService):
+                self.handleCancelMoveService()
             elif isinstance(self.service, GuideMoveService):
                 self.handleMoveGuideService()
             elif isinstance(self.service, PreciseMoveService):
@@ -96,6 +102,11 @@ class RobotProxy:
                 self.service.path.pop(0)
         else:
             self.service.result = ServiceResult.Success
+
+    def handleCancelMoveService(self):
+        stopMove(self)
+        self.status = RobotStatus.Ready
+        self.service.result = ServiceResult.Success
 
     def handleMoveGuideService(self):
         self.goal = MapManager.instance().vertexToPos(self.service.node)

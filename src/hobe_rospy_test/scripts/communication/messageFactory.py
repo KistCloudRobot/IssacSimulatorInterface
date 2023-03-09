@@ -39,6 +39,8 @@ class MessageFactory:
             byteBuffer = MessageFactory.newAckLoginMessage(service, byteBuffer)
         elif isinstance(service, MoveService):
             byteBuffer = MessageFactory.newAckMoveMessage(service, byteBuffer)
+        elif isinstance(service, CancelMoveService):
+            byteBuffer = MessageFactory.newAckCancelMoveMessage(service, byteBuffer)
         elif isinstance(service, GuideMoveService):
             byteBuffer = MessageFactory.newAckGuideMoveMessage(service, byteBuffer)
         elif isinstance(service, PreciseMoveService):
@@ -69,6 +71,8 @@ class MessageFactory:
             byteBuffer = MessageFactory.newAckEndLoginMessage(service, byteBuffer)
         elif isinstance(service, MoveService):
             byteBuffer = MessageFactory.newAckEndMoveMessage(service, byteBuffer)
+        elif isinstance(service, CancelMoveService):
+            byteBuffer = MessageFactory.newAckEndCancelMoveMessage(service, byteBuffer)
         elif isinstance(service, GuideMoveService):
             byteBuffer = MessageFactory.newAckEndGuideMoveMessage(service, byteBuffer)
         elif isinstance(service, PreciseMoveService):
@@ -116,6 +120,21 @@ class MessageFactory:
     @staticmethod
     def newAckEndMoveMessage(service, byteBuffer):
         byteBuffer.appendInt(MessageType.AckEndMove.value, signed=False)
+        byteBuffer.appendInt(20)
+        byteBuffer.appendInt(service.robotName.value)
+        byteBuffer.appendInt(service.result.value)
+        return byteBuffer
+
+    @staticmethod
+    def newAckCancelMoveMessage(service, byteBuffer):
+        byteBuffer.appendInt(MessageType.AckCancelMove.value, signed=False)
+        byteBuffer.appendInt(16)
+        byteBuffer.appendInt(service.robotName.value)
+        return byteBuffer
+
+    @staticmethod
+    def newAckEndCancelMoveMessage(service, byteBuffer):
+        byteBuffer.appendInt(MessageType.AckEndCancelMove.value, signed=False)
         byteBuffer.appendInt(20)
         byteBuffer.appendInt(service.robotName.value)
         byteBuffer.appendInt(service.result.value)
